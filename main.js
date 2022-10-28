@@ -1,19 +1,8 @@
-function createModal() {
-  const div = document.createElement("div");
-  div.innerHTML = `
-    <button>=</button>
-    <dialog>
-        <div class="nav-items">
-            <a href="#">Home</a>
-            <a href="#">New</a>
-            <a href="#">Popular</a>
-            <a href="#">Trending</a>
-            <a href="#">Categories</a>
-        </div>
-    </dialog>`;
+let show = true;
+const menuSection = document.querySelector(".menu-section");
+const menuToggle = menuSection.querySelector(".menu-toggle");
 
-    console.log(div);
-    
-}
-
-createModal()
+menuToggle.addEventListener("click", ()=>{
+    menuSection.classList.toggle("on", show);
+    show = !show;
+})
