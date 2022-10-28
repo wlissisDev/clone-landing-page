@@ -27,6 +27,7 @@ body {
 
 .container {
     padding: 4rem 6rem;
+    height: auto;
 }
 
 .nav {
@@ -46,23 +47,25 @@ body {
     color: var(--color-neutral-darkGrayBlue);
 }
 
-.nav-items a:hover{
+.nav-items a:hover {
     color: var(--color-primary-red);
 }
 
 /* ================main================ */
 
 .main {
-    height: auto;    
+    height: auto;
     margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    overflow: hidden;
+    gap: 20px;
+    padding: 10px;
 }
 #desktop-image {
-    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    
 }
 
 .info {
@@ -72,6 +75,7 @@ body {
     justify-content: space-between;
     flex-direction: column;
     gap: 20px;
+
 }
 
 .main-info {
@@ -114,10 +118,10 @@ body {
     font-size: 14px;
     color: var(--color-neutral-white);
     margin-top: 28px;
-    transition: .2s;
+    transition: 0.2s;
 }
 
-.button:hover{
+.button:hover {
     background-color: var(--color-neutral-veryDarkBlue);
 }
 /* =================card-Info============== */
@@ -139,12 +143,12 @@ body {
     font-size: 40px;
 }
 
-.main-card li h3{
+.main-card li h3 {
     cursor: pointer;
     margin-bottom: 6px;
     transition: 0.1s;
 }
-.main-card li h3:hover{
+.main-card li h3:hover {
     color: var(--color-primary-orange);
 }
 
@@ -153,7 +157,7 @@ body {
 }
 
 .main-card ul li {
-    margin: 26px 0 0 0 ;
+    margin: 26px 0 ;
 }
 
 .main-card ul li::after {
@@ -166,7 +170,7 @@ body {
 }
 
 .main-card ul li:nth-child(3)::after {
-   display: none;
+    display: none;
 }
 
 .main-card li p {
@@ -184,11 +188,10 @@ body {
     height: auto;
 }
 
-.list-cards{
+.list-cards {
     list-style: none;
     display: flex;
 }
-
 
 .list-cards li {
     display: flex;
@@ -197,112 +200,114 @@ body {
     gap: 20px;
 }
 
-.list-cards div{
+.list-cards div {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.list-cards li img{
+.list-cards li img {
     max-width: 100px;
 }
 
-.list-cards li span{
+.list-cards li span {
     font-size: 34px;
     color: var(--color-neutral-grayBlue);
     font-weight: 600;
 }
 
-.list-cards li h1{
+.list-cards li h1 {
     font-size: 18px;
     color: var(--color-neutral-veryDarkBlue);
     cursor: pointer;
     transition: 0.2s;
 }
 
-.list-cards li h1:hover{
+.list-cards li h1:hover {
     color: var(--color-primary-red);
 }
 
-.list-cards li p{
+.list-cards li p {
     color: var(--color-neutral-darkGrayBlue);
 }
 /* ===========MOBILE================ */
-@media (max-width: 375px){
+@media (max-width: 700px) {
     .container {
         padding: 1rem;
     }
     .nav {
-        align-items:flex-start;
+        align-items: flex-start;
     }
     .nav-items {
         flex-direction: column;
     }
-    .main{
+    .main {
         height: auto;
         flex-direction: column;
-        gap:60px;
+        gap: 60px;
     }
 
-    #desktop-image{
+    #desktop-image {
         height: 300px;
         width: 100%;
     }
 
-    .main-info{
+    .main-info {
         flex-direction: column;
         align-items: flex-start;
     }
-    .main-info div{
+    .main-info div {
         width: 100%;
     }
 
-    .list-cards{
+    .list-cards {
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+    }
+    .card {
+    }
+    .card div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        padding: 1rem;
+    }
+    .nav {
+        align-items: flex-start;
+    }
+    .nav-items {
+        flex-direction: column;
+    }
+    .main {
+        height: auto;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    #desktop-image {
+        height: 300px;
+        width: 100%;
+    }
+
+    .main-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-info div {
+        width: 100%;
+    }
+
+    .list-cards {
         flex-direction: column;
         gap: 40px;
     }
 }
 
-
-@media (max-width: 700px){
-    .container {
-        padding: 1rem;
-    }
-    .nav {
-        align-items:flex-start;
-    }
-    .nav-items {
-        flex-direction: column;
-    }
-    .main{
-        height: auto;
-        flex-direction: column;
-        gap:60px;
-    }
-
-    #desktop-image{
-        height: 300px;
-        width: 100%;
-    }
-
-    .main-info{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .main-info div{
-        width: 100%;
-    }
-
-    .list-cards{
-        flex-direction: column;
-        gap: 40px;
-        width: 100%;
-    }
-    .card{
-       
-    }
-    .card div{
-        width: 100%;
-    }
+.disable {
+    display: none;
 }
