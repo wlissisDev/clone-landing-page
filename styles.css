@@ -228,3 +228,38 @@ body {
 .list-cards li p{
     color: var(--color-neutral-darkGrayBlue);
 }
+/* ===========MOBILE================ */
+@media (max-width: 375px){
+    .container {
+        padding: 1rem;
+    }
+    .nav {
+        align-items:flex-start;
+    }
+    .nav-items {
+        flex-direction: column;
+    }
+    .main{
+        height: auto;
+        flex-direction: column;
+        gap:60px;
+    }
+
+    #desktop-image{
+        height: 300px;
+        width: 100%;
+    }
+
+    .main-info{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-info div{
+        width: 100%;
+    }
+
+    .list-cards{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
